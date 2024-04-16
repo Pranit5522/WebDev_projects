@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: #F6F5F2;
+      }
+      .pricing-container{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        padding: 5%;
+      }
+      .pricing-plan{
+        height: 40rem;
+        flex: 1;
+        border-radius: 2em;
+        border-top-right-radius: 3em;
+        border-top-left-radius: 3em;
+        text-align: center;
+      }
+      .plan-title{
+        background-color: white; 
+        border-top-right-radius: 2em;
+        border-top-left-radius: 2em;
+        padding: 20px;
+      }
+      .one{
+        background: linear-gradient(#E72929, #69065d);
+      }
+      .two{
+        background: linear-gradient(#03fcfc, #121db3);
+      }
+      .three{
+        background: linear-gradient(#18edc2, #15eb27);
+      }
+      .one > .plan-title > p{
+        background: linear-gradient(to right,#E72929, #69065d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .two > .plan-title > p{
+        background: linear-gradient(to right,#03fcfc, #121db3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .three > .plan-title > p{
+        background: linear-gradient(to right,#18edc2, #15eb27);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .plan-title > p{
+        margin: 0;
+        font-weight: 800;
+        font-size: 2rem;
+      }
+      .plan-price{
+        color: white;
+        font-weight: 900;
+        font-size: 40px;
+        padding: 2rem;
+      }
+      .plan-features{
+        background-color: white;
+        margin: 2rem;
+        padding: 3rem;
+        margin-top: 0;
+        border-radius: 25px;
+        text-align: justify;
+      }
+      ul{
+        list-style-type: none;
+        line-height: 26pt;
+      }
+      ul li{
+        color: #a3a3a3;
+      }
+      .plan-button{
+        background-color: white;
+        border: none;
+        height: 2.5rem;
+        width: 60%;
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 25px;
+      }
+      p{
+        margin: 0;
+      }
+      .onee > p{
+        background: linear-gradient(to right,#E72929, #69065d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .twoe > p{
+        background: linear-gradient(to right,#03fcfc, #121db3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .threee > p{
+        background: linear-gradient(to right,#18edc2, #15eb27);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container{
+          flex-direction: column;
+          gap: 20px;
+          height: 100%;
+        }
+        .pricing-plan{
+          height: 100rem;
+        }
+        button{
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan one">
+        <div class="plan-title"><p>BASIC</p></div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>✅ Lifetime availability</li>
+          <li>❌ Personal Training</li>
+          <li>❌ Support</li>
+          <li>❌ Analysis Tool</li>
+        </ul>
+        <button class="plan-button onee"><p>Sign Up</p></button>
+      </div>
+      <div class="pricing-plan two">
+        <div class="plan-title"><p>Standard</p></div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Lifetime availability</li>
+          <li>✅ Personal Training</li>
+          <li>✅ Phone &amp; Email Support</li>
+          <li>❌ Analysis Tool</li>
+        </ul>
+        <button class="plan-button twoe"><p>Sign Up</p></button>
+      </div>
+      <div class="pricing-plan three">
+        <div class="plan-title"><p>Premium</p></div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ Lifetime availability</li>
+          <li>✅ Personal Training</li>
+          <li>✅ 24/7 Support</li>
+          <li>✅ Analysis Tool</li>
+        </ul>
+        <button class="plan-button threee"><p>Sign Up</p></button>
+      </div>
+    </div>
+  </body>
+</html>
